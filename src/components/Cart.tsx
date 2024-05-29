@@ -3,7 +3,7 @@ import React from 'react';
 import { useCart } from '../context/CartContext';
 
 const Cart: React.FC = () => {
-    const { cart, removeFromCart } = useCart();
+    const { cart } = useCart();
 
     return (
         <div className="container mx-auto px-4 mt-8">
@@ -23,7 +23,7 @@ const Cart: React.FC = () => {
                                     <p className="text-gray-600">Quantity: {item.quantity}</p>
                                     <button
                                         className="bg-red-500 text-white px-4 py-2 rounded mt-2 hover:bg-red-600"
-                                        onClick={() => removeFromCart(item.id)}
+                                        //onClick={() => removeFromCart(item.id)}
                                     >
                                         Remove
                                     </button>

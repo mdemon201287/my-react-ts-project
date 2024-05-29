@@ -38,7 +38,7 @@ const App: React.FC = () => {
                         </div>
                     </section>
                     <Routes>
-                        <Route path="/" element={<ProductList onAddToCart={toggleCart} />} />
+                        <Route path="/" element={<ProductList />} />
                         <Route path="/product/:id" element={<ProductDetails onAddToCart={toggleCart} />} />
                     </Routes>
                     <CartSidebar isOpen={isCartOpen} onClose={toggleCart} />

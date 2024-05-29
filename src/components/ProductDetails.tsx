@@ -34,6 +34,7 @@ const ProductDetails: React.FC<ProductDetailsProps> = ({ onAddToCart }) => {
             .catch(error => {
                 setError('Error fetching data');
                 setLoading(false);
+                console.log(error);
             });
     }, [id]);
 

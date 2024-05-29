@@ -10,12 +10,12 @@ interface Product {
     description: string;
     category: string;
     image: string;
+    quantity: number;
 }
 
 const ProductList: React.FC = () => {
     const [products, setProducts] = useState<Product[]>([]);
     const { addToCart } = useCart();
-    const [isCartOpen, setIsCartOpen] = useState(false);
 
     useEffect(() => {
         axios.get('https://fakestoreapi.com/products')
@@ -29,7 +29,6 @@ const ProductList: React.FC = () => {
 
     const handleAddToCart = (product: Product) => {
         addToCart(product);
-        setIsCartOpen(true); // Open the cart sidebar when adding to cart
     };
 
     return (
